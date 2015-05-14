@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''
     A command line tool for JSON
     Copyright (C) 2015 Christoph "criztovyl" Schulz
@@ -39,9 +39,6 @@ for arg in args:
     except (IndexError, KeyError, TypeError) as e:
         print("%s: %s" % (type(e).__name__, e))
         sys.exit(1)
-#print("JSON data:")
-#print("Action:")
-#print(action)
 if(action == "inspect"):
     json_type=type(json_data)
     if(json_type is list):
